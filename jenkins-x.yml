@@ -11,5 +11,5 @@ pipelineConfig:
       build:
         replace: true
         steps:
-      - sh: python -m pip install pytest
-      - sh: pytest
+        - sh: python -m pip install pytest
+        - sh: pytest
