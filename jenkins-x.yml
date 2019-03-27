@@ -3,16 +3,13 @@ pipelineConfig:
   pipelines:
     pullRequest:
       build:
+        replace: true
         steps:
         - sh: python -m pip install pytest
         - sh: pytest
     release:
-      setVersion:
-        steps:
-        - sh: echo \$(jx-release-version) > VERSION
-          comment: so we can retrieve the version in later steps
-        - sh: jx step tag --version \$(cat VERSION)
       build:
+        replace: true
         steps:
       - sh: python -m pip install pytest
       - sh: pytest
