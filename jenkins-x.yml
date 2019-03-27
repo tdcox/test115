@@ -1,7 +1,18 @@
 buildPack: python
-pipelines:
-  pullRequest:
-    build:
-      steps:
+pipelineConfig:
+  pipelines:
+    pullRequest:
+      build:
+        steps:
+        - sh: python -m pip install pytest
+        - sh: pytest
+    release:
+      setVersion:
+        steps:
+        - sh: echo \$(jx-release-version) > VERSION
+          comment: so we can retrieve the version in later steps
+        - sh: jx step tag --version \$(cat VERSION)
+      build:
+        steps:
       - sh: python -m pip install pytest
       - sh: pytest
