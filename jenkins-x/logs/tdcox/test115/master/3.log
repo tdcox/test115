@@ -1,0 +1,110 @@
+Step: build-step-credential-initializer-42m5t:
+
+{"level":"warn","ts":1553701166.3276465,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1553701166.3298535,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-tdcox-test115-master-sr2cf:
+
+{"level":"warn","ts":1553701168.6763246,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1553701170.1036577,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/tdcox/test115\" @ \"v0.0.3\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-setup-jx-git-credentials:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: build-step-build-python-unittest:
+
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+ERROR: logging before flag.Parse: E0327 15:39:50.423034      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0327 15:39:50.427030      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/03/27 15:39:50 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0001] Downloading base image python:onbuild        
+2019/03/27 15:39:51 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Executing 3 build triggers                   
+[36mINFO[0m[0002] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0002] Checking for cached layer 10.59.251.141:5000/f96ea06eb1dc1e896fb6ba60e374488f43e9918d4fe1cb30c5f26c8dea340a73... 
+2019/03/27 15:39:52 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] No cached layer found for cmd RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN pip install --no-cache-dir -r requirements.txt requires it. 
+[36mINFO[0m[0019] Taking snapshot of full filesystem...        
+[36mINFO[0m[0028] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0028] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0028] Taking snapshot of files...                  
+[36mINFO[0m[0028] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0028] cmd: /bin/sh                                 
+[36mINFO[0m[0028] args: [-c pip install --no-cache-dir -r requirements.txt] 
+You are using pip version 10.0.1, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0029] Taking snapshot of full filesystem...        
+[36mINFO[0m[0033] Using files from context: [/workspace/source] 
+[36mINFO[0m[0033] COPY . /usr/src/app                          
+[36mINFO[0m[0033] Pushing layer 10.59.251.141:5000/f96ea06eb1dc1e896fb6ba60e374488f43e9918d4fe1cb30c5f26c8dea340a73 to cache now 
+[36mINFO[0m[0033] Taking snapshot of files...                  
+[36mINFO[0m[0033] ENV PORT 8080                                
+[36mINFO[0m[0033] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0033] EXPOSE 8080                                  
+[36mINFO[0m[0033] cmd: EXPOSE                                  
+[36mINFO[0m[0033] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0033] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0033] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0033] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0033] CMD ["app.py"]                               
+[36mINFO[0m[0033] No files changed in this command, skipping snapshotting. 
+2019/03/27 15:40:24 pushed blob sha256:4c4ecd965809b8d550e7d90d01ec53c59bcafe40ba0c379b88d467afa5837ad8
+2019/03/27 15:40:24 pushed blob sha256:96e517a393153f0f6b3b93c9fa1792fdadd7cad3cbb2165f19411c9a725fc416
+2019/03/27 15:40:24 10.59.251.141:5000/f96ea06eb1dc1e896fb6ba60e374488f43e9918d4fe1cb30c5f26c8dea340a73:latest: digest: sha256:f515a5e31a54aacaa5fcc1f506b18154e9a3d3beade7285da3b3730993060a55 size: 428
+2019/03/27 15:40:24 existing blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2019/03/27 15:40:24 existing blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2019/03/27 15:40:24 existing blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2019/03/27 15:40:24 existing blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2019/03/27 15:40:24 existing blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2019/03/27 15:40:24 existing blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2019/03/27 15:40:24 existing blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2019/03/27 15:40:24 existing blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2019/03/27 15:40:24 existing blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2019/03/27 15:40:24 pushed blob sha256:0cf810a54df5b1bf22190c21aee7d8aa0547c3c960b6efc4fa9ba88871caa363
+2019/03/27 15:40:24 pushed blob sha256:cd3ca0366124682a53561586f29054a1b3201fe3005d2114b2da4230f55ac06d
+2019/03/27 15:40:24 pushed blob sha256:2ee0855f0a17959c4755dcc2dd11535253fa1bfb163a684607eb3dfbea37e0d8
+2019/03/27 15:40:25 pushed blob sha256:96e517a393153f0f6b3b93c9fa1792fdadd7cad3cbb2165f19411c9a725fc416
+2019/03/27 15:40:25 10.59.251.141:5000/tdcox/test115:0.0.3: digest: sha256:2d3f8888bb4e106792ff8cae5ba8c4727eb050ad2216382b3e5b3ba464073e7b size: 2225
+Step: build-step-build-post-build:
+
+no CVE provider running in the current jx namespace so skip adding image to be analysed
+Step: build-step-promote-changelog:
+
+Converted /workspace/source/charts/test115 to an unshallow repository
+Generating change log from git ref 2a97b058ca34ffcf81dd905b6ce4daf991cdcc16 => be29f53fbdf0f9889c7a8c46688734601577274b
+Failed to enrich commits with issues: User.jenkins.io "" is invalid: metadata.name: Required value: name or generateName is required
+Failed to enrich commits with issues: User.jenkins.io "" is invalid: metadata.name: Required value: name or generateName is required
+Finding issues in commit messages using git format
+No release found for tdcox/test115 and tag v0.0.3 so creating a new release
+Updated the release information at https://github.com/tdcox/test115/releases/tag/v0.0.3
+generated: /workspace/source/charts/test115/templates/release.yaml
+Created Release test115-0-0-3 resource in namespace jx
+Updating PipelineActivity tdcox-test115-master-3 with version 0.0.3
+Updated PipelineActivities tdcox-test115-master-3 with release notes URL: https://github.com/tdcox/test115/releases/tag/v0.0.3
+Step: build-step-promote-helm-release:
+
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: releases http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository releases.
+Adding missing Helm repo: jenkins-x http://chartmuseum.jenkins-x.io
+Successfully added Helm repository jenkins-x.
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file test115-0.0.3.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+Step: build-step-promote-jx-promote:
+
+prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/jx/issues/2410
+Promoting app test115 version 0.0.3 to namespace jx-staging
+Created Pull Request: https://github.com/tdcox/environment-d29-staging/pull/3
+
+Pull Request https://github.com/tdcox/environment-d29-staging/pull/3 is merged at sha fa3f824f31dff77713a0333a7324b1769981b5c4
+Pull Request merged but we are not waiting for the update pipeline to complete!
