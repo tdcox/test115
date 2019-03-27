@@ -1,1 +1,7 @@
 buildPack: python
+pipelines:
+  pullRequest:
+    build:
+      steps:
+      - sh: python -m pip install pytest
+      - sh: pytest
