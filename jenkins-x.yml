@@ -3,17 +3,19 @@ agent:
   label: jenkins-python
   container: python
 pipelineConfig:
-  replace: true
   pipelines:
     pullRequest:
       build:
+        replace: true
         steps:
         - sh: python -m pip install pytest hypothesis && pytest
         - sh: export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml
       postBuild:
+        replace: true
         steps:
         - sh: jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:$PREVIEW_VERSION
       promote:
+        replace: true
         steps:
         - dir: ./charts/preview
           steps:
@@ -21,6 +23,7 @@ pipelineConfig:
           - sh: jx preview --app $APP_NAME --dir ../..
     release:
       setup:
+        replace: true
         steps:
         - groovy: git 'https://REPLACE_ME_GIT_PROVIDER/REPLACE_ME_ORG/REPLACE_ME_APP_NAME.git'
           when: "prow"
@@ -32,17 +35,20 @@ pipelineConfig:
         - sh: jx step git credentials
           when: "!prow"
       setVersion:
+        replace: true
         steps:
         - sh: echo \$(jx-release-version) > VERSION
           comment: so we can retrieve the version in later steps
         # TODO set the version in source?
         - sh: jx step tag --version \$(cat VERSION)
       build:
+        replace: true
         steps:
         - sh: python -m pip install pytest hypothesis && pytest
         - sh: export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml
         - sh: jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:\$(cat VERSION)
       promote:
+        replace: true
         steps:
         - dir: ./charts/REPLACE_ME_APP_NAME
           steps:
@@ -52,6 +58,7 @@ pipelineConfig:
           - comment: promote through all 'Auto' promotion Environments
             sh: jx promote -b --all-auto --timeout 1h --version \$(cat ../../VERSION)
     post:
+      replace: true
       steps:
       - groovy: always
         when: "!prow"
