@@ -1,0 +1,159 @@
+Step: build-step-credential-initializer-26d9k:
+
+{"level":"warn","ts":1553770983.6984894,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1553770983.699057,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-tdcox-test115-master-9xzhf:
+
+{"level":"warn","ts":1553770986.1508944,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1553770989.202456,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/tdcox/test115\" @ \"v0.0.9\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-setup-jx-git-credentials:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: build-step-build-python-unittest:
+
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+2019/03/28 11:03:33 Unable to read "/home/jenkins/.docker/config.json": open /home/jenkins/.docker/config.json: no such file or directory
+ERROR: logging before flag.Parse: E0328 11:03:33.725168      12 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0328 11:03:33.727955      12 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/03/28 11:03:33 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0001] Downloading base image python:onbuild        
+2019/03/28 11:03:34 Unable to read "/home/jenkins/.docker/config.json": open /home/jenkins/.docker/config.json: no such file or directory
+2019/03/28 11:03:34 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Executing 3 build triggers                   
+[36mINFO[0m[0002] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0002] Checking for cached layer 10.59.251.141:5000/f96ea06eb1dc1e896fb6ba60e374488f43e9918d4fe1cb30c5f26c8dea340a73... 
+2019/03/28 11:03:35 Unable to read "/home/jenkins/.docker/config.json": open /home/jenkins/.docker/config.json: no such file or directory
+2019/03/28 11:03:35 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] No cached layer found for cmd RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN pip install --no-cache-dir -r requirements.txt requires it. 
+[36mINFO[0m[0018] Taking snapshot of full filesystem...        
+[36mINFO[0m[0027] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0027] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0027] Taking snapshot of files...                  
+[36mINFO[0m[0027] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0027] cmd: /bin/sh                                 
+[36mINFO[0m[0027] args: [-c pip install --no-cache-dir -r requirements.txt] 
+You are using pip version 10.0.1, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0029] Taking snapshot of full filesystem...        
+[36mINFO[0m[0032] Using files from context: [/workspace/source] 
+[36mINFO[0m[0032] COPY . /usr/src/app                          
+[36mINFO[0m[0032] Pushing layer 10.59.251.141:5000/f96ea06eb1dc1e896fb6ba60e374488f43e9918d4fe1cb30c5f26c8dea340a73 to cache now 
+2019/03/28 11:04:06 Unable to read "/home/jenkins/.docker/config.json": open /home/jenkins/.docker/config.json: no such file or directory
+[36mINFO[0m[0032] Taking snapshot of files...                  
+[36mINFO[0m[0032] ENV PORT 8080                                
+[36mINFO[0m[0032] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0032] EXPOSE 8080                                  
+[36mINFO[0m[0032] cmd: EXPOSE                                  
+[36mINFO[0m[0032] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0032] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0032] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0032] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0032] CMD ["app.py"]                               
+[36mINFO[0m[0032] No files changed in this command, skipping snapshotting. 
+2019/03/28 11:04:06 pushed blob sha256:614f3c3893bb906c34b0621517b6065991de57b6701378b834d40b80914bac19
+2019/03/28 11:04:06 pushed blob sha256:1720a0f592a27582cd0593e32313d9d18912c6a555e211959277268e19d1d343
+2019/03/28 11:04:06 10.59.251.141:5000/f96ea06eb1dc1e896fb6ba60e374488f43e9918d4fe1cb30c5f26c8dea340a73:latest: digest: sha256:d963c372d4f7099969c8aa615531ce2fa112097e52689950e589ded1693f0559 size: 428
+2019/03/28 11:04:06 Unable to read "/home/jenkins/.docker/config.json": open /home/jenkins/.docker/config.json: no such file or directory
+2019/03/28 11:04:06 existing blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2019/03/28 11:04:06 existing blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2019/03/28 11:04:06 existing blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2019/03/28 11:04:06 existing blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2019/03/28 11:04:06 existing blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2019/03/28 11:04:06 existing blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2019/03/28 11:04:06 existing blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2019/03/28 11:04:06 existing blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2019/03/28 11:04:06 existing blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2019/03/28 11:04:06 pushed blob sha256:1a67114e41dc8dd222b567b20e3d74219457ce3e042f6f84a4658f6c585e7f60
+2019/03/28 11:04:06 pushed blob sha256:94e89325e1ce6af8df72e64fb78c79eb7cf30c65e2bc3962e0b263180f20368f
+2019/03/28 11:04:06 pushed blob sha256:a46eb5782c4d76eedd7695666bb74a8e3c27ab3ec38c371565c32822fc4bd0b4
+2019/03/28 11:04:07 pushed blob sha256:1720a0f592a27582cd0593e32313d9d18912c6a555e211959277268e19d1d343
+2019/03/28 11:04:07 10.59.251.141:5000/tdcox/test115:0.0.9: digest: sha256:f8d68e823be8b4c8200fecff9fd77c9e7bf8fbfd15cbb227267358858021a617 size: 2225
+Step: build-step-build-post-build:
+
+no CVE provider running in the current jx namespace so skip adding image to be analysed
+Step: build-step-build-step6:
+
+Collecting pytest
+  Downloading https://files.pythonhosted.org/packages/c8/52/c455e718f19e4fd7126c81b4910ca2431ded6c28b97e36a1a1f5e5ef7247/pytest-4.3.1-py2.py3-none-any.whl (219kB)
+Collecting hypothesis
+  Downloading https://files.pythonhosted.org/packages/ac/c4/3c2af323c2adbfce8fb682e83c5afb659be5f580025e673ce2fb20607dc0/hypothesis-4.14.0-py2-none-any.whl (254kB)
+Collecting atomicwrites>=1.0 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/52/90/6155aa926f43f2b2a22b01be7241be3bfd1ceaf7d0b3267213e8127d41f4/atomicwrites-1.3.0-py2.py3-none-any.whl
+Collecting pluggy>=0.7 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/84/e8/4ddac125b5a0e84ea6ffc93cfccf1e7ee1924e88f53c64e98227f0af2a5f/pluggy-0.9.0-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): setuptools in /usr/lib/python2.7/site-packages (from pytest)
+Collecting attrs>=17.4.0 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/23/96/d828354fa2dbdf216eaa7b7de0db692f12c234f7ef888cc14980ef40d1d2/attrs-19.1.0-py2.py3-none-any.whl
+Collecting pathlib2>=2.2.0; python_version < "3.6" (from pytest)
+  Downloading https://files.pythonhosted.org/packages/2a/46/c696dcf1c7aad917b39b875acdc5451975e3a9b4890dca8329983201c97a/pathlib2-2.3.3-py2.py3-none-any.whl
+Collecting py>=1.5.0 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/76/bc/394ad449851729244a97857ee14d7cba61ddb268dce3db538ba2f2ba1f0f/py-1.8.0-py2.py3-none-any.whl (83kB)
+Requirement already satisfied (use --upgrade to upgrade): six>=1.10.0 in /usr/lib/python2.7/site-packages (from pytest)
+Collecting more-itertools<6.0.0,>=4.0.0; python_version <= "2.7" (from pytest)
+  Downloading https://files.pythonhosted.org/packages/2f/9d/dcfe59e213093695f108508af1214cf9cd95cc5489e46877ec5cb56369e5/more_itertools-5.0.0-py2-none-any.whl (52kB)
+Collecting funcsigs; python_version < "3.0" (from pytest)
+  Downloading https://files.pythonhosted.org/packages/69/cb/f5be453359271714c01b9bd06126eaf2e368f1fddfff30818754b5ac2328/funcsigs-1.0.2-py2.py3-none-any.whl
+Collecting enum34; python_version == "2.7" (from hypothesis)
+  Downloading https://files.pythonhosted.org/packages/c5/db/e56e6b4bbac7c4a06de1c50de6fe1ef3810018ae11732a50f15f62c7d050/enum34-1.1.6-py2-none-any.whl
+Collecting scandir; python_version < "3.5" (from pathlib2>=2.2.0; python_version < "3.6"->pytest)
+  Downloading https://files.pythonhosted.org/packages/df/f5/9c052db7bd54d0cbf1bc0bb6554362bba1012d03e5888950a4f5c5dadc4e/scandir-1.10.0.tar.gz
+Installing collected packages: atomicwrites, pluggy, attrs, scandir, pathlib2, py, more-itertools, funcsigs, pytest, enum34, hypothesis
+  Running setup.py install for scandir: started
+    Running setup.py install for scandir: finished with status 'done'
+Successfully installed atomicwrites-1.3.0 attrs-19.1.0 enum34-1.1.6 funcsigs-1.0.2 hypothesis-4.14.0 more-itertools-5.0.0 pathlib2-2.3.3 pluggy-0.9.0 py-1.8.0 pytest-4.3.1 scandir-1.10.0
+You are using pip version 8.1.2, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.5, pytest-4.3.1, py-1.8.0, pluggy-0.9.0
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase('/workspace/source/.hypothesis/examples')
+rootdir: /workspace/source, inifile:
+plugins: hypothesis-4.14.0
+collected 3 items
+
+test/test_helloworld_hypothesis.py .                                     [ 33%]
+test/test_helloworld_pytest.py .                                         [ 66%]
+test/test_helloworld_unittest.py .                                       [100%]
+
+=========================== 3 passed in 1.04 seconds ===========================
+Step: build-step-promote-changelog:
+
+Converted /workspace/source/charts/test115 to an unshallow repository
+Generating change log from git ref fd73c66a009a36312a0562285e24d02806d7d93c => 01a4b5cdb19b22da1364eb1beb41ba13b3a55e25
+Failed to enrich commits with issues: User.jenkins.io "" is invalid: metadata.name: Required value: name or generateName is required
+Failed to enrich commits with issues: User.jenkins.io "" is invalid: metadata.name: Required value: name or generateName is required
+Finding issues in commit messages using git format
+No release found for tdcox/test115 and tag v0.0.9 so creating a new release
+Updated the release information at https://github.com/tdcox/test115/releases/tag/v0.0.9
+generated: /workspace/source/charts/test115/templates/release.yaml
+Created Release test115-0-0-9 resource in namespace jx
+Updating PipelineActivity tdcox-test115-master-9 with version 0.0.9
+Updated PipelineActivities tdcox-test115-master-9 with release notes URL: https://github.com/tdcox/test115/releases/tag/v0.0.9
+Step: build-step-promote-helm-release:
+
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: jenkins-x http://chartmuseum.jenkins-x.io
+Successfully added Helm repository jenkins-x.
+Adding missing Helm repo: releases http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository releases.
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file test115-0.0.9.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+Step: build-step-promote-jx-promote:
+
+prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/jx/issues/2410
+Promoting app test115 version 0.0.9 to namespace jx-staging
+Created Pull Request: https://github.com/tdcox/environment-d29-staging/pull/5
+
+Pull Request https://github.com/tdcox/environment-d29-staging/pull/5 is merged at sha dc6fdc95dda71022ba1f5669148271023ccaaeb1
+Pull Request merged but we are not waiting for the update pipeline to complete!
