@@ -3,12 +3,10 @@ pipelineConfig:
   pipelines:
     pullRequest:
       build:
-        replace: true
         steps:
         - sh: python -m pip install pytest hypothesis && pytest
     release:
       build:
-        replace: true
         steps:
         - sh: python -m pip install pytest hypothesis && pytest
 
