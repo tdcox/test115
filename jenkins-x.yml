@@ -5,10 +5,10 @@ pipelineConfig:
       build:
         replace: true
         steps:
-        - sh: python -m pip install pytest && pytest
+        - sh: python -m pip install pytest hypothesis && pytest
     release:
       build:
         replace: true
         steps:
-        - sh: python -m pip install pytest && pytest
+        - sh: python -m pip install pytest hypothesis && pytest
 
