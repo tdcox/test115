@@ -3,14 +3,16 @@ pipelineConfig:
   pipelines:
     pullRequest:
       build:
+        preSteps:
+        - sh: python -m pip install pytest
         replace: true
         steps:
-        - sh: python -m pip install pytest
         - sh: pytest
     release:
       build:
+        preSteps:
+        - sh: python -m pip install pytest
         replace: true
         steps:
-        - sh: python -m pip install pytest
         - sh: pytest
 
