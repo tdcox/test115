@@ -1,0 +1,181 @@
+Step: build-step-credential-initializer-gjlxz:
+
+{"level":"warn","ts":1554376690.2975807,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1554376690.2984023,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-*****-test115-master-pbnbl:
+
+{"level":"warn","ts":1554376690.951728,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1554376692.4029822,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/*****/test115\" @ \"v0.0.18\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-setup-**-git-credentials:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: build-step-setup-step3:
+
+Already on 'master'
+Step: build-step-setup-step4:
+
+Step: build-step-setup-step5:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: build-step-build-step6:
+
+Collecting flake8
+  Downloading https://files.pythonhosted.org/packages/e9/76/b915bd28976068a9843bf836b789794aa4a8eb13338b23581005cd9177c0/flake8-3.7.7-py2.py3-none-any.whl (68kB)
+Collecting entrypoints<0.4.0,>=0.3.0 (from flake8)
+  Downloading https://files.pythonhosted.org/packages/ac/c6/44694103f8c221443ee6b0041f69e2740d89a25641e62fb4f2ee568f2f9c/entrypoints-0.3-py2.py3-none-any.whl
+Collecting pyflakes<2.2.0,>=2.1.0 (from flake8)
+  Downloading https://files.pythonhosted.org/packages/84/f2/ed0ffb887f8138a8fe5a621b8c0bb9598bfb3989e029f6c6a85ee66628ee/pyflakes-2.1.1-py2.py3-none-any.whl (59kB)
+Collecting functools32; python_version < "3.2" (from flake8)
+  Downloading https://files.pythonhosted.org/packages/c5/60/6ac26ad05857c601308d8fb9e87fa36d0ebf889423f47c3502ef034365db/functools32-3.2.3-2.tar.gz
+Collecting configparser; python_version < "3.2" (from flake8)
+  Downloading https://files.pythonhosted.org/packages/ba/05/6c96328e92e625fc31445d24d75a2c92ef9ba34fc5b037fe69693c362a0d/configparser-3.7.4-py2.py3-none-any.whl
+Collecting typing; python_version < "3.5" (from flake8)
+  Downloading https://files.pythonhosted.org/packages/cc/3e/29f92b7aeda5b078c86d14f550bf85cff809042e3429ace7af6193c3bc9f/typing-3.6.6-py2-none-any.whl
+Collecting enum34; python_version < "3.4" (from flake8)
+  Downloading https://files.pythonhosted.org/packages/c5/db/e56e6b4bbac7c4a06de1c50de6fe1ef3810018ae11732a50f15f62c7d050/enum34-1.1.6-py2-none-any.whl
+Collecting mccabe<0.7.0,>=0.6.0 (from flake8)
+  Downloading https://files.pythonhosted.org/packages/87/89/479dc97e18549e21354893e4ee4ef36db1d237534982482c3681ee6e7b57/mccabe-0.6.1-py2.py3-none-any.whl
+Collecting pycodestyle<2.6.0,>=2.5.0 (from flake8)
+  Downloading https://files.pythonhosted.org/packages/0e/0c/04a353e104d2f324f8ee5f4b32012618c1c86dd79e52a433b64fceed511b/pycodestyle-2.5.0-py2.py3-none-any.whl (51kB)
+Installing collected packages: configparser, entrypoints, pyflakes, functools32, typing, enum34, mccabe, pycodestyle, flake8
+  Running setup.py install for functools32: started
+    Running setup.py install for functools32: finished with status 'done'
+Successfully installed configparser-3.7.4 entrypoints-0.3 enum34-1.1.6 flake8-3.7.7 functools32-3.2.3.post2 mccabe-0.6.1 pycodestyle-2.5.0 pyflakes-2.1.1 typing-3.6.6
+You are using pip version 8.1.2, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Step: build-step-build-step7:
+
+Collecting pytest
+  Downloading https://files.pythonhosted.org/packages/7e/16/83b2a35c427b838df9836c9e7e4ae6dfbcbdea643db44652f693b1c57d70/pytest-4.4.0-py2.py3-none-any.whl (223kB)
+Collecting hypothesis
+  Downloading https://files.pythonhosted.org/packages/98/70/f8f169c0984246d7c250a2510ca3d9fd717f748bbc960f2c498a4bf449fd/hypothesis-4.14.3-py2-none-any.whl (256kB)
+Collecting funcsigs>=1.0; python_version < "3.0" (from pytest)
+  Downloading https://files.pythonhosted.org/packages/69/cb/f5be453359271714c01b9bd06126eaf2e368f1fddfff30818754b5ac2328/funcsigs-1.0.2-py2.py3-none-any.whl
+Collecting atomicwrites>=1.0 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/52/90/6155aa926f43f2b2a22b01be7241be3bfd1ceaf7d0b3267213e8127d41f4/atomicwrites-1.3.0-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): setuptools in /usr/lib/python2.7/site-packages (from pytest)
+Collecting attrs>=17.4.0 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/23/96/d828354fa2dbdf216eaa7b7de0db692f12c234f7ef888cc14980ef40d1d2/attrs-19.1.0-py2.py3-none-any.whl
+Collecting pathlib2>=2.2.0; python_version < "3.6" (from pytest)
+  Downloading https://files.pythonhosted.org/packages/2a/46/c696dcf1c7aad917b39b875acdc5451975e3a9b4890dca8329983201c97a/pathlib2-2.3.3-py2.py3-none-any.whl
+Collecting py>=1.5.0 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/76/bc/394ad449851729244a97857ee14d7cba61ddb268dce3db538ba2f2ba1f0f/py-1.8.0-py2.py3-none-any.whl (83kB)
+Requirement already satisfied (use --upgrade to upgrade): six>=1.10.0 in /usr/lib/python2.7/site-packages (from pytest)
+Collecting pluggy>=0.9 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/84/e8/4ddac125b5a0e84ea6ffc93cfccf1e7ee1924e88f53c64e98227f0af2a5f/pluggy-0.9.0-py2.py3-none-any.whl
+Collecting more-itertools<6.0.0,>=4.0.0; python_version <= "2.7" (from pytest)
+  Downloading https://files.pythonhosted.org/packages/2f/9d/dcfe59e213093695f108508af1214cf9cd95cc5489e46877ec5cb56369e5/more_itertools-5.0.0-py2-none-any.whl (52kB)
+Collecting enum34; python_version == "2.7" (from hypothesis)
+  Using cached https://files.pythonhosted.org/packages/c5/db/e56e6b4bbac7c4a06de1c50de6fe1ef3810018ae11732a50f15f62c7d050/enum34-1.1.6-py2-none-any.whl
+Collecting scandir; python_version < "3.5" (from pathlib2>=2.2.0; python_version < "3.6"->pytest)
+  Downloading https://files.pythonhosted.org/packages/df/f5/9c052db7bd54d0cbf1bc0bb6554362bba1012d03e5888950a4f5c5dadc4e/scandir-1.10.0.tar.gz
+Installing collected packages: funcsigs, atomicwrites, attrs, scandir, pathlib2, py, pluggy, more-itertools, pytest, enum34, hypothesis
+  Running setup.py install for scandir: started
+    Running setup.py install for scandir: finished with status 'done'
+Successfully installed atomicwrites-1.3.0 attrs-19.1.0 enum34-1.1.6 funcsigs-1.0.2 hypothesis-4.14.3 more-itertools-5.0.0 pathlib2-2.3.3 pluggy-0.9.0 py-1.8.0 pytest-4.4.0 scandir-1.10.0
+You are using pip version 8.1.2, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.5, pytest-4.4.0, py-1.8.0, pluggy-0.9.0
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase('/workspace/source/.hypothesis/examples')
+rootdir: /workspace/source
+plugins: hypothesis-4.14.3
+collected 3 items
+
+test/test_helloworld_hypothesis.py .                                     [ 33%]
+test/test_helloworld_pytest.py .                                         [ 66%]
+test/test_helloworld_unittest.py .                                       [100%]
+
+=========================== 3 passed in 1.04 seconds ===========================
+Step: build-step-build-step8:
+
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+ERROR: logging before flag.Parse: E0404 11:18:37.013010      14 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0404 11:18:37.017477      14 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/04/04 11:18:37 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0001] Downloading base image python:onbuild        
+2019/04/04 11:18:38 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Executing 3 build triggers                   
+[36mINFO[0m[0002] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0002] Checking for cached layer 10.59.251.141:5000/f96ea06eb1dc1e896fb6ba60e374488f43e9918d4fe1cb30c5f26c8dea340a73... 
+2019/04/04 11:18:39 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] No cached layer found for cmd RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN pip install --no-cache-dir -r requirements.txt requires it. 
+[36mINFO[0m[0020] Taking snapshot of full filesystem...        
+[36mINFO[0m[0025] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0025] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0025] Taking snapshot of files...                  
+[36mINFO[0m[0025] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0025] cmd: /bin/sh                                 
+[36mINFO[0m[0025] args: [-c pip install --no-cache-dir -r requirements.txt] 
+You are using pip version 10.0.1, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0027] Taking snapshot of full filesystem...        
+[36mINFO[0m[0031] Pushing layer 10.59.251.141:5000/f96ea06eb1dc1e896fb6ba60e374488f43e9918d4fe1cb30c5f26c8dea340a73 to cache now 
+[36mINFO[0m[0031] Using files from context: [/workspace/source] 
+2019/04/04 11:19:08 pushed blob sha256:86896f15e400365cd5a300d7a620a79e00169400fdad8125d16b2050970c7473
+[36mINFO[0m[0031] COPY . /usr/src/app                          
+2019/04/04 11:19:08 pushed blob sha256:8a67f55fb5d624183c0a50fb4abca0a4c292b52916c0e4d5d71c178326f51bae
+2019/04/04 11:19:08 10.59.251.141:5000/f96ea06eb1dc1e896fb6ba60e374488f43e9918d4fe1cb30c5f26c8dea340a73:latest: digest: sha256:1fd83406dac60b60990f9e488cc7e2f32dbf0b14945b8969086a5ed41ae0e41e size: 428
+[36mINFO[0m[0031] Taking snapshot of files...                  
+[36mINFO[0m[0031] ENV PORT 8080                                
+[36mINFO[0m[0031] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0031] EXPOSE 8080                                  
+[36mINFO[0m[0031] cmd: EXPOSE                                  
+[36mINFO[0m[0031] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0031] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0031] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0031] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0031] CMD ["app.py"]                               
+[36mINFO[0m[0031] No files changed in this command, skipping snapshotting. 
+2019/04/04 11:19:08 existing blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2019/04/04 11:19:08 existing blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2019/04/04 11:19:08 existing blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2019/04/04 11:19:08 existing blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2019/04/04 11:19:08 existing blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2019/04/04 11:19:08 existing blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2019/04/04 11:19:08 existing blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2019/04/04 11:19:08 existing blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2019/04/04 11:19:08 existing blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2019/04/04 11:19:08 pushed blob sha256:179a769ca64218b772970481f38a18787604d68988c2d5ad742cae79264c43bf
+2019/04/04 11:19:08 pushed blob sha256:1a285aa12546a6c1348d66bdae7dd4b59742827eb47f94a0bf8206562e51e26d
+2019/04/04 11:19:08 pushed blob sha256:739c5be3f58374b208b34de7591ce06d741e1b0569da05ca3a59114a77cf8e2f
+2019/04/04 11:19:09 pushed blob sha256:8a67f55fb5d624183c0a50fb4abca0a4c292b52916c0e4d5d71c178326f51bae
+2019/04/04 11:19:09 10.59.251.141:5000/*****/test115:0.0.18: digest: sha256:9ca9fc2f98bf3ef6154e4226a080f11625033891febafd1d8a3128c755d3713c size: 2225
+Step: build-step-build-step9:
+
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+Step: build-step-promote-step10:
+
+Converted /workspace/source/charts/test115 to an unshallow repository
+Generating change log from git ref c485ba260678db66c84bbf0d7acb01e52cd7be84 => 465e10a2ac597668cfffcd8e0b5cd02d6723b497
+Failed to enrich commits with issues: User.jenkins.io "-0" is invalid: metadata.name: Invalid value: "-0": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+Failed to enrich commits with issues: User.jenkins.io "-0" is invalid: metadata.name: Invalid value: "-0": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+Finding issues in commit messages using git format
+No release found for *****/test115 and tag v0.0.18 so creating a new release
+Updated the release information at https://github.com/*****/test115/releases/tag/v0.0.18
+generated: /workspace/source/charts/test115/templates/release.yaml
+Created Release test115-0-0-18 resource in namespace **
+Updating PipelineActivity *****-test115-master-17 with version 0.0.18
+Updated PipelineActivities *****-test115-master-17 with release notes URL: https://github.com/*****/test115/releases/tag/v0.0.18
+Step: build-step-promote-step11:
+
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: jenkins-x http://chartmuseum.jenkins-x.io
+Successfully added Helm repository jenkins-x.
+Adding missing Helm repo: releases http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository releases.
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file test115-0.0.18.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+Step: build-step-promote-step12:
+
+prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app test115 version 0.0.18 to namespace **-staging
+Created Pull Request: https://github.com/*****/environment-d29-staging/pull/19
+
+Pull Request https://github.com/*****/environment-d29-staging/pull/19 is merged at sha 392d174b2e663b70cdd3e0e05638567b91d5e0ad
+Pull Request merged but we are not waiting for the update pipeline to complete!
